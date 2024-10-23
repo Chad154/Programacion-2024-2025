@@ -8,7 +8,7 @@ public class leerNumero {
         System.out.print("Escriba el numero (Entero) que quiere mostrar ");
         int numeroEntero = teclado.nextInt();// Se puede hacer lo mismo con long .nextLong()
         System.out.print("Introduzca su nombre: ");
-        
+
         /*
          * Se pone un .nextLine antes del String porque al dar al Enter el bufer
          * recogeria el Enter como el String
@@ -23,6 +23,7 @@ public class leerNumero {
         double numeroDecimal = teclado.nextDouble();// Se puede hacer lo mismo con float .nextFloat()
 
         System.out.println("Su numero entero es: " + numeroEntero);
+        System.out.println("Su nombre es: " + nombre);
         System.out.println("Su numero decimal es: " + numeroDecimal);
 
         teclado.close();
