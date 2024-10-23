@@ -10,20 +10,15 @@ public class intercambio_Dos_Variables {
         int x = teclado.nextInt();
         System.out.println("Introduzca el segundo numero para intecambiar");
         int y = teclado.nextInt();
-        
-        System.out.println("Las variables inicales son x = "+x+" y = "+y); 
+
+        System.out.println("Las variables inicales son x = " + x + " y = " + y);
 
         c = x;
         x = y;
         y = c;
 
-        System.out.println("Las variables cambidas son: x = "+x+" y = "+y);
+        System.out.println("Las variables cambidas son: x = " + x + " y = " + y);
 
-        
-        
-
-
-        
     }
-    
+
 }
