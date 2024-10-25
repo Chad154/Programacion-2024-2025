@@ -12,8 +12,11 @@ public class cadenaLenght {
         // .charAt Devuelve el caracter que esta en esa posicion
         System.out.println(cadena.charAt(0));
 
-        //Sacar la letra final de la cadena
+        // Sacar la letra final de la cadena
 
-        System.out.println("La letra final de la cadena es: " + cadena.charAt(longitud-1));
+        System.out.println("La letra final de la cadena [" + cadena + "] es " + cadena.charAt(longitud - 1));
+
+        System.out.println(cadena.toUpperCase());
+        System.out.println(cadena.toLowerCase());
     }
 }
