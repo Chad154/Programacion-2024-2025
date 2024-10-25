@@ -16,7 +16,9 @@ public class cadenaLenght {
 
         System.out.println("La letra final de la cadena [" + cadena + "] es " + cadena.charAt(longitud - 1));
 
+        // Mayusculas
         System.out.println(cadena.toUpperCase());
+        // Minusculas
         System.out.println(cadena.toLowerCase());
     }
 }
