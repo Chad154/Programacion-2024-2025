@@ -8,7 +8,7 @@ public class contraseñaExamen {
         String contraseña;
         int contador = 0;
 
-        while (contador < 3) {
+        while (contador < 4) {
             System.out.println("Escriba la contraseña");
             contraseña = teclado.nextLine();
 
@@ -23,7 +23,7 @@ public class contraseñaExamen {
                 contador++;
             }
 
-            if (contador == 3) {
+            if (contador == 4 && !contraseña.equals("PAQUITO")) {
 
                 System.out.println("LO SIENTO, CUENTA BLOQUEADA");
             }
