@@ -30,6 +30,7 @@ public class numeroMayorMultiplo3Examen {
             System.out.println("No has introducido ningun numero multiplo de 3");
         }
 
+        teclado.close();
     }
 
 }

@@ -14,5 +14,7 @@ public class mayorEdad {
         } else {
             System.out.println("Usted es menor de edad");
         }
+
+        teclado.close();
     }
 }

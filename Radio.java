@@ -12,6 +12,7 @@ public class Radio {
         System.out.println("El area del circulo es: " + (radio * radio * Math.PI));
         System.out.println("El volumen de la esfera es: " + ((4 / 3) * Math.PI * (radio * radio * radio)));
 
+        teclado.close();
     }
 
 }

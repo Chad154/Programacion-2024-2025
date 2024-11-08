@@ -19,6 +19,7 @@ public class intercambio_Dos_Variables {
 
         System.out.println("Las variables cambidas son: x = " + x + " y = " + y);
 
+        teclado.close();
     }
 
 }

@@ -15,6 +15,8 @@ public class descuento {
         double descuento = (precioInicial - precioFinal) / precioInicial * 100;
 
         System.out.println("El descuento aplicado es: " + descuento + " %");
+
+        teclado.close();
     }
 
 }

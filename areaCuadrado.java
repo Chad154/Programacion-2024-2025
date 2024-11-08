@@ -8,6 +8,8 @@ public class areaCuadrado {
         double lado = teclado.nextDouble();
 
         System.out.println("El lado del cuadrado es: " + lado * lado);
+
+        teclado.close();
     }
 
 }

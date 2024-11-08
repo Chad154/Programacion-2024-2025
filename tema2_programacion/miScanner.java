@@ -16,6 +16,7 @@ public class miScanner {
 
         System.out.println("Hola, " + nombre);
 
+        teclado.close();
     }
 
 }
