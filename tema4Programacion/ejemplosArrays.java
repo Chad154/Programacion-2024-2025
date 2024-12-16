@@ -4,6 +4,7 @@ public class ejemplosArrays {
 
         int[] vector = new int[6];
         int[] arrayClonado;
+        int[] arrayCopiado;
 
         // Lo mostramos
         imprimir(vector);
@@ -14,10 +15,27 @@ public class ejemplosArrays {
         // Lo mostramos
         System.out.print("El vector es: ");
         imprimir(vector);
-        
+
         System.out.print("El array clonado es: ");
         arrayClonado = vector.clone();
+        arrayCopiado = vector;
         imprimir(arrayClonado);
+
+        // Modifico el primer elemento del vector
+
+        vector[0] = -1;
+        System.out.print("El vector original es: ");
+        imprimir(vector);
+        System.out.print("El array clonado es: ");
+        imprimir(arrayClonado);
+       
+        arrayCopiado[0] = 0;
+        System.out.print("El vector original es: ");
+        imprimir(vector);
+        System.out.print("El vector copiado es: ");
+        imprimir(arrayCopiado);
+
+
     }
 
     static void imprimir(int[] vector) {
