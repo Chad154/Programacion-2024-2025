@@ -1,38 +1,34 @@
 package tema5_POO_Programacion;
 
-public class cuentaBancaria {
-
-    private int id;
+public class CuentaBancaria {
+    private String id;
     private double saldo;
     private String propietario;
     private String tipo;
 
-    //Constructor
-
-    public cuentaBancaria(int i, double s, String p, String t){
+    // constructor
+    public CuentaBancaria(String i, String p, String t) {
         id = i;
-        saldo = s;
         propietario = p;
         tipo = t;
 
     }
 
-    public void obtenerDatos(){
-        System.out.println("ID es " + id);
-        System.out.println("Su saldo es: " + saldo);
-        System.out.println("El propietario es " + propietario);
-        System.out.println("El tipo de cuenta es " + tipo);
-        System.out.println();
+    // depositar
+    public void depositar(double cantidad) {
+        saldo += cantidad;
     }
 
-    public void retirarSaldo(double s){
-        saldo = saldo - s;
+    // retirar
+    public void mostrarCuenta() {
+        System.out.println("\t-----------------------");
+        System.out.println("\t Datos Cuenta Bancaria");
+        System.out.println("\t-----------------------");
+        System.out.println("Id: " + id);
+        System.out.println("Propietario: " + propietario);
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Tipo: " + tipo);
+
     }
 
-    public void añadirSaldor(double s){
-        saldo = saldo + s;
-    }
-
- 
-    
 }
