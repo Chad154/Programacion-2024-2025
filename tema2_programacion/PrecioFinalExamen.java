@@ -20,10 +20,9 @@ public class PrecioFinalExamen {
             System.out.println("Introduzca el porcentaje de descuento (entre 10 y 40 inclusives):");
             descuento = teclado.nextFloat();
 
-            
             if (descuento < 10 || descuento > 40) {
                 System.out.println("Porcentaje no valido. No hay calculo para " + producto);
-                
+
             } else {
                 precioFinal = precioInicial - (precioInicial * (descuento / 100));
                 System.out.println("El producto: " + producto + " y su precio final: " + precioFinal);

@@ -5,7 +5,7 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
 
-        int numero[] = { 1, 1, 1, 1};
+        int numero[] = { 1, 1, 1, 1 };
         int suma = 0;
         for (int i : numero) {
             suma = suma + i;

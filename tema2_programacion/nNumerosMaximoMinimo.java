@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class nNumerosMaximoMinimo {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        
+
         int numeros;
         int mayor = Integer.MIN_VALUE;
         int menor = Integer.MAX_VALUE;
@@ -39,8 +39,8 @@ public class nNumerosMaximoMinimo {
 
         System.out.println("El mayor numero es: " + mayor + " y aparece " + contadorMayor + " veces.");
         System.out.println("El menor numero es: " + menor + " y aparece " + contadorMenor + " veces.");
-        
+
         teclado.close();
     }
-       
+
 }

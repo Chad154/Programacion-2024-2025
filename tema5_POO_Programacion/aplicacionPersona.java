@@ -22,6 +22,9 @@ public class AplicacionPersona {
         c2.depositar(200);
         c2.mostrarCuenta();
 
+        p1.obtenerDatos();
+        p2.obtenerDatos();
+
     }
 
 }

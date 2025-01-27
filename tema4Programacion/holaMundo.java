@@ -11,10 +11,10 @@ public class holaMundo {
         }
 
         System.out.println(" Hola Prieto");
-        
+
         sumar(3);
-        sumar(4,7);
-        sumar(12,43,23,432,23,23,45,2,1,67,86);
+        sumar(4, 7);
+        sumar(12, 43, 23, 432, 23, 23, 45, 2, 1, 67, 86);
 
     }
 

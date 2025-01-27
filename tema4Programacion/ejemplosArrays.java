@@ -28,13 +28,12 @@ public class ejemplosArrays {
         imprimir(vector);
         System.out.print("El array clonado es: ");
         imprimir(arrayClonado);
-       
+
         arrayCopiado[0] = 0;
         System.out.print("El vector original es: ");
         imprimir(vector);
         System.out.print("El vector copiado es: ");
         imprimir(arrayCopiado);
-
 
     }
 

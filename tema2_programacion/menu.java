@@ -86,5 +86,5 @@ public class menu {
         } while (opcion != 6);
         teclado.close();
     }
-   
+
 }

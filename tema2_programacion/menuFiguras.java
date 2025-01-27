@@ -97,7 +97,7 @@ public class menuFiguras {
                     "1 triangulo dibujado\n" +
                     "2 triangulo sin relleno\n" +
                     "3 rectangulo dibujado\n" +
-                    "4 rectangulo sin relleno\n"+
+                    "4 rectangulo sin relleno\n" +
                     "5 Salir del Programa");
 
             opcion = teclado.nextInt();

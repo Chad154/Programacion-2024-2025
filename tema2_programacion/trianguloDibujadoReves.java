@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class trianguloDibujadoReves {
 
-    public static void main(String args []){
+    public static void main(String args[]) {
 
         Scanner teclado = new Scanner(System.in);
 
@@ -15,12 +15,12 @@ public class trianguloDibujadoReves {
         caracater = teclado.next().charAt(0);
         System.out.println("");
 
-        for(int i = altura; i >= 1; i-- ){
-            for(int j = 1; j <= i;j++){
+        for (int i = altura; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(caracater);
             }
             System.out.println("");
         }
     }
-    
+
 }
