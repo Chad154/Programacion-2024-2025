@@ -6,6 +6,13 @@ public class recorridoArrays {
     public static void main(String[] args) {
         int[] array = { 1, 4, 5, 6, 7, 8, 3, 8 };
         // int [][] matriz = {{1,2}, {3,4,5},{0}}
+        int numero = 0;
+
+        System.out.println("El numero es: " + numero);
+        // Esto no cambia
+        cambiarNumero(numero, 10);
+
+        System.out.println("Numero cambiado es: " + numero);
 
         System.out.println("El array principal es: ");
         for (int i = 0; i < array.length; i++) {
@@ -37,6 +44,10 @@ public class recorridoArrays {
         for (int i = 0; i < vector.length; i++) {
             vector[i] += num;
         }
+    }
+
+    static void cambiarNumero(int numero, int num) {
+        numero += num;
     }
 
 }
