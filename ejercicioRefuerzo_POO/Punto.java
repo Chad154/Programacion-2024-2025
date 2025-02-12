@@ -1,13 +1,12 @@
 package ejercicioRefuerzo_POO;
 
-public class Punto {
+public class punto {
 
     private int x;
     private int y;
     public String nombre;
 
-
-    public punto(   int x) {
+    public punto(int x) {
         this.x = x;
         this.y = x;
     }
@@ -27,6 +26,7 @@ public class Punto {
         this(x, y);
         this.nombre = nombre;
     }
+
     public int getX() {
         return x;
     }
@@ -51,16 +51,6 @@ public class Punto {
         this.nombre = nombre;
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {       
-        return super.clone();
-    }
-
-    @Override
-    public String toString() {
-        return "Punto [x=" + x + ", y=" + y + "]";
-    }
-
     public void mostrarPunto() {
         if (this.nombre == null)
             System.out.println("El punto no tiene nombre, sus datos son:");
@@ -69,7 +59,7 @@ public class Punto {
         System.out.println("X=" + x);
         System.out.println("Y=" + y);
         System.out.println("La distancia respecto al centro es " + calcularDistanciaCentro());
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("");
     }
 
     public double calcularDistanciaCentro() {
@@ -77,7 +67,6 @@ public class Punto {
         z = Math.sqrt((x * x) + (y * y));
         return z;
     }
-
 
     public static boolean distintos(punto p1, punto p2) {
         return p1.getX() != p2.getX() || p1.getY() != p2.getY();
@@ -94,30 +83,4 @@ public class Punto {
         return true;
     }
 
-    public static double distancia(punto p1, punto p2) {
-        return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
-    }
-
-    public static void areaTriangulo(punto p1, punto p2, punto p3) {
-
-        double a = distancia(p1, p2);
-        double b = distancia(p2, p3);
-        double c = distancia(p3, p1);
-        double s = (a + b + c) / 2;
-        double area = (Math.sqrt(s * (s - a) * (s - b) * (s - c)));
-
-        if (area != 0) {
-            String tipo = "isósceles";
-            if (a == b && b == c)
-                tipo = "equilátero";
-            else if (a != b && b != c && a != c)
-                tipo = "escaleno";
-
-            System.out.println("El triángulo es " + tipo + " y su área es " + area);
-        } else
-            System.out.println("ERROR: los puntos no forman un triángulo");
-    }
-
 }
-
-

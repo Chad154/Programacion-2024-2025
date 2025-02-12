@@ -1,6 +1,6 @@
 package tema5_POO_Programacion;
 
-public class punto {
+public class punto1 {
 
     private int x;
     private int y;
@@ -10,23 +10,23 @@ public class punto {
     // CONSTRUCTORES
     //////////////////////////////////////////////////////
 
-    public punto(int x) {
+    public punto1(int x) {
         this.x = x;
         this.y = x;
     }
 
-    public punto(int x, String nombre) {
+    public punto1(int x, String nombre) {
         this(x);
         this.nombre = nombre;
     }
 
-    public punto(int x, int y) {
+    public punto1(int x, int y) {
         this.x = x;
         this.y = y;
 
     }
 
-    public punto(int x, int y, String nombre) {
+    public punto1(int x, int y, String nombre) {
         this(x, y);
         this.nombre = nombre;
     }
@@ -94,11 +94,11 @@ public class punto {
     // MÉTODOS ESTÁTICOS
     //////////////////////////////////////////////////////
 
-    public static boolean distintos(punto p1, punto p2) {
+    public static boolean distintos(punto1 p1, punto1 p2) {
         return p1.getX() != p2.getX() || p1.getY() != p2.getY();
     }
 
-    public static boolean distintos(punto... puntos) {
+    public static boolean distintos(punto1... puntos) {
         for (int i = 0; i < puntos.length; i++) {
             for (int j = i + 1; j < puntos.length; j++) {
                 if (puntos[i].getX() == puntos[j].getX() && puntos[i].getY() == puntos[j].getY()) {
@@ -109,11 +109,11 @@ public class punto {
         return true;
     }
 
-    public static double distancia(punto p1, punto p2) {
+    public static double distancia(punto1 p1, punto1 p2) {
         return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
     }
 
-    public static void areaTriangulo(punto p1, punto p2, punto p3) {
+    public static void areaTriangulo(punto1 p1, punto1 p2, punto1 p3) {
 
         double a = distancia(p1, p2);
         double b = distancia(p2, p3);

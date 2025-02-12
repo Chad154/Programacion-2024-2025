@@ -6,9 +6,9 @@ public class aplicacionPunto {
 
         int num = 1;
         String nombre = "Los Strings son inmutables";
-        punto p1 = new punto(2, "p1");
-        punto p2 = new punto(1, 3, "p2");
-        punto p3 = new punto(1, "p3");
+        punto1 p1 = new punto1(2, "p1");
+        punto1 p2 = new punto1(1, 3, "p2");
+        punto1 p3 = new punto1(1, "p3");
 
         p1.mostrarPunto();
         p2.mostrarPunto();
@@ -26,15 +26,15 @@ public class aplicacionPunto {
 
     }
 
-    public static void mostrarPuntos(punto... puntos) {
+    public static void mostrarPuntos(punto1... puntos) {
 
-        for (punto p : puntos) {
+        for (punto1 p : puntos) {
             p.mostrarPunto();
 
         }
     }
 
-    public static void modificarPunto(punto p) {
+    public static void modificarPunto(punto1 p) {
         p.setX(999);
 
     }

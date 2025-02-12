@@ -7,7 +7,7 @@ public class appArrayPuntos {
         // creamos 5 puntos aleatorios
 
         Random r = new Random();
-        punto[] puntos = new punto[5];
+        punto1[] puntos = new punto1[5];
         for (int i = 0; i < puntos.length; i++) {
             puntos[i].mostrarPunto();
         }

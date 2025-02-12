@@ -3,12 +3,12 @@ package tema5_POO_Programacion;
 public final class aplicacionPuntoInmutable {
     private final int n;
     private final String s;
-    private final punto p;
+    private final punto1 p;
 
-    public aplicacionPuntoInmutable(int n, String s, punto p) {
+    public aplicacionPuntoInmutable(int n, String s, punto1 p) {
     this.n = n;
     this.s = new String(s);
-    this.p = new punto(p.getX(), p.getY());
+    this.p = new punto1(p.getX(), p.getY());
     }
 
     public int getN() {
@@ -19,7 +19,7 @@ public final class aplicacionPuntoInmutable {
         return new String(s);
     }
 
-    public punto getPunto() {
-        return new punto(p.getX(), p.getY());
+    public punto1 getPunto() {
+        return new punto1(p.getX(), p.getY());
     }
 }
