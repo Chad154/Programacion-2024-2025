@@ -1,7 +1,6 @@
 package animales;
 
 import java.util.ArrayList;
-import tema5_POO_Programacion.punto1;
 
 public class appAnimales {
 
@@ -24,8 +23,7 @@ public class appAnimales {
 
         for (Perro a : perros) {
             a.hacerLadrido();
-        }
-m  
+        } 
 
     }
 }
