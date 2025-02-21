@@ -13,7 +13,7 @@ public class appGrafico2D {
 
 
         grafico.agregarPunto(p1);
-
+        p1.mostrarPerimetro(p1,p2); 
         
     }
 
