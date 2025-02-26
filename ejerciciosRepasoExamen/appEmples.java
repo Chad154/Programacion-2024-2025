@@ -14,10 +14,11 @@ public class appEmples {
         empleados[5] = jefe;
         jefe.establecerIncentivo(5);
 
-        Jefatura jefeChad = (Jefatura)empleados[4];
+        Jefatura jefeChad = (Jefatura) empleados[4];
 
-        for(Empleado e:empleados){
-            System.out.println("Empleado: " + "ID: " + e.DameID() + "\n Nombre:" + e.dameNombre() + "\n Sueldo: " + e.dameSueldo());
+        for (Empleado e : empleados) {
+            System.out.println("Empleado: " + "ID: " + e.DameID() + "\n Nombre:" + e.dameNombre() + "\n Sueldo: "
+                    + e.dameSueldo());
         }
     }
 

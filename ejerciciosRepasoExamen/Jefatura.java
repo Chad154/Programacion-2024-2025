@@ -1,6 +1,6 @@
 package ejerciciosRepasoExamen;
 
-public class Jefatura extends Empleado {
+public class Jefatura extends Empleado implements Jefes {
 
     private double incentivo;
 
@@ -12,7 +12,13 @@ public class Jefatura extends Empleado {
         this.incentivo = incentivo;
     }
 
-    public double dameSueldo(){
+    public double dameSueldo() {
         return super.dameSueldo() + incentivo;
+    }
+
+    public double darBonus(double bonus) {
+        double prima = 2000;
+        return Bonus.bonus_inical + bonus;
+
     }
 }

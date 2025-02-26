@@ -1,6 +1,6 @@
 package ejerciciosRepasoExamen;
 
-public class Empleado {
+public class Empleado implements Jefes {
 
     private String nombre;
     protected double sueldo;
@@ -45,5 +45,15 @@ public class Empleado {
         if (sueldo > 0) {
             this.sueldo = sueldo;
         }
+    }
+
+    @Override
+    public void darOrdenes(String orden) {
+        String respuesta = "Orden recibida: " + orden;
+        System.out.println(respuesta);
+    }
+
+    public double darBonus(double bonus) {
+        return Bonus.bonus_inical + bonus;
     }
 }
