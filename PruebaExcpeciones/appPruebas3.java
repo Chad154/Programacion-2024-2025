@@ -10,11 +10,15 @@ public class appPruebas3 {
 
         System.out.println("Introduce los minutos");
         minutos = entrada.nextInt();
+        comprobar(minutos);
+        System.out.println("Los minutos son validos");
+    }
+
+    public static void comprobar(int minutos) throws InputMismatchException {
         if (minutos < 0 || minutos >= 60) {
             // Lanzamos el error de datos de entrada
             throw new InputMismatchException("Valor fuera de rango (0-59)");
         }
-        System.out.println("Los minutos son validos");
     }
 
 }
