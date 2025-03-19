@@ -21,8 +21,8 @@ public class appPruebas4 {
                 teclado.next();
             }
         } while (!salir);
-        teclado.close();
         System.out.println("El programa sigue");
+        teclado.close();
 
     }
 
