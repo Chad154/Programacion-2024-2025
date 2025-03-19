@@ -11,25 +11,25 @@ public class appPruebas3 {
         divisor = 0;
 
         System.out.println("Introduce los minutos");
-        minutos = entrada.nextInt();
-        comprobar(minutos);
         try {
+            minutos = entrada.nextInt();
+            comprobar(minutos);
             dividir(dividendo, divisor);
         } catch (ArithmeticException e) {
-            System.out.println("Capturamos excepcion en el main");
+            System.out.println("Capturamos excepcion Arithmetic en el main");
+        } catch (InputMismatchException e) {
+            System.out.println("Los minutos tienen que ser numeros");
+        } catch (Exception e) {
+            System.out.println("Error indefinido");
         }
         System.out.println("Continua el programa");
     }
 
     public static void comprobar(int minutos) throws InputMismatchException {
-        // Este metodo lanza y captura la expecion
-        try {
-            if (minutos < 0 || minutos >= 60) {
-                // Lanzamos el error de datos de entrada
-                throw new InputMismatchException("Valor fuera de rango (0-59)");
-            }
-        } catch (InputMismatchException e) {
-            System.out.println("Error los minutos no son validos");
+        // Este método lanza la excepción sin capturarla
+        if (minutos < 0 || minutos >= 60) {
+            // Lanzamos el error de datos de entrada
+            throw new InputMismatchException("Valor fuera de rango (0-59)");
         }
     }
 
@@ -40,5 +40,4 @@ public class appPruebas3 {
             System.out.println("La division es: " + (n / m));
         System.out.println();
     }
-
 }
