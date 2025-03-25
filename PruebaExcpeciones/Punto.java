@@ -19,14 +19,15 @@ public class Punto {
         numPuntos++;
     }
 
-    public Punto(int x, int y, String nombre) {
-        this.x = x;
-        this.y = y;
+    public Punto(int x, int y, String nombre) throws PuntoNoValidoException {
+        this(x,y);
         this.nombre = nombre;
         numPuntos++;
     }
 
-    public Punto(int x, int y) {
+    public Punto(int x, int y) throws PuntoNoValidoException {
+        if (x < 0 || y < 0)
+            throw new PuntoNoValidoException(x, y);
         this.x = x;
         this.y = y;
         this.nombre = "p" + numPuntos;

@@ -2,13 +2,14 @@ package PruebaExcpeciones;
 
 public class PuntoNoValidoException extends Exception {
 
-    private Punto punto;
+    private int x, y;
 
-    public PuntoNoValidoException(Punto punto) {
-        this.punto = punto;
+    public PuntoNoValidoException(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
     public String toString() {
-        return "Punto [" + punto.getX() + "," + punto.getY() + "] no valido";
+        return "Punto [" + x + "," + y + "] no valido";
     }
 }

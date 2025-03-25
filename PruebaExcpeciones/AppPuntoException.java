@@ -9,6 +9,7 @@ public class AppPuntoException {
     public static void main(String[] args) {
         try {
             nuevoPunto();
+            Punto p1 = new Punto(-1, 1, null);
         } catch (PuntoNoValidoException e) {
             System.out.println("Error: " + e);
         } catch (InputMismatchException e) {
@@ -25,8 +26,7 @@ public class AppPuntoException {
 
         Punto p = new Punto(x, y);
         // Comprobamos que el punto es valido sino lanzamos la excepcion
-        if (x < 0 || y < 0)
-            throw new PuntoNoValidoException(p);
+
         System.out.println(p.getNombre() + " (" + x + "," + y + ") creado");
 
         return p;
