@@ -26,6 +26,13 @@ public class Punto {
         numPuntos++;
     }
 
+    public Punto(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.nombre = "p" + numPuntos;
+        numPuntos++;
+    }
+
     public int getX() {
         return x;
     }
