@@ -1,29 +1,57 @@
 package EjerciciosRefuerzoPOO_EXCEPCIONES;
-
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Cliente {
-
     private String nombre;
     private String apellidos;
     private String direccion;
     private String localidad;
-    private Date fNacimiento;
-
-    public Cliente(String nombre, String apellidos, String direccion, String localidad, Date fNacimiento) {
+    private LocalDate fechaNacimiento;
+    //constructor
+    public Cliente(String nombre, String apellidos, String direccion, String localidad, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.direccion = direccion;
         this.localidad = localidad;
-        this.fNacimiento = fNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
     }
-
-    String nombreCompleto() {
-        return "Nombre: " + nombre + apellidos;
+    //getters-setters
+    public String getNombre() {
+        return nombre;
     }
-
-    String dirreccionCompleto() {
-        return "Localidad: " + localidad + "\nDirrecion: " + direccion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-
+    public String getApellidos() {
+        return apellidos;
+    }
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    public String getDireccion() {
+        return direccion;
+    }
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    public String getLocalidad() {
+        return localidad;
+    }
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    
+    //métodos
+    public String nombreCompleto(){
+        return nombre + " " + apellidos;
+    }
+    public String direccionCompleta(){
+        return direccion + " "+ localidad;
+    }
 }
