@@ -104,6 +104,11 @@ public class Cuenta {
         System.out.println(s);
     }
 
+    @Override
+    public String toString() {
+        return "Número de cuenta: " + numeroCuenta + " - Titular: " + titular.nombreCompleto();
+    }
+
     private class Movimiento {
         private static final byte INGRESO = 0;
         private static final byte RETIRO = 1;

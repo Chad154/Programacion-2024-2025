@@ -90,10 +90,99 @@ public class appBanco {
 
         // crear la cuenta
 
-        cuentas.add(new Cuenta(contador, contador, cliente)); 
+        cuentas.add(new Cuenta(contador, contador, cliente));
     }
 
     private static void mantenimentoCuenta() {
+        // Si no hay cuents, mensaje y volvemos
 
+        if (cuentas.isEmpty()) {
+            System.out.println("No hay cuentas debe crear una");
+            return;
+        }
+        // Si hay cuentas las mostramos
+        int numCuenta;
+        do {
+            System.out.println("Seleccione el numero de cuenta");
+            for (Cuenta c : cuentas) {
+                System.out.println(c);
+            }
+            numCuenta = Integer.parseInt(teclado.nextLine());
+        } while (!validarCuenta(numCuenta));
+        opcionCuenta();
     }
+
+    private static Cliente validarCliente(String nombre) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getNombre().equalsIgnoreCase(nombre)) {
+                return cliente;
+            }
+        }
+        System.out.println("Cliente no encontrado. Inténtelo de nuevo.");
+        return null;
+    }
+
+    private static boolean validarCuenta(int numCuenta) {
+        for (Cuenta c : cuentas) {
+            if (c.getNumeroCuenta() == numCuenta) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static void opcionCuenta() {
+        System.out.println("Introduce el número de cuenta para realizar operaciones:");
+        int numCuenta = Integer.parseInt(teclado.nextLine());
+
+        // Buscar la cuenta seleccionada
+        Cuenta cuentaSeleccionada = null;
+        for (Cuenta cuenta : cuentas) {
+            if (cuenta.getNumeroCuenta() == numCuenta) {
+                cuentaSeleccionada = cuenta;
+                break;
+            }
+        }
+
+        if (cuentaSeleccionada == null) {
+            System.out.println("Cuenta no encontrada. Inténtelo de nuevo.");
+            return;
+        }
+
+        int opcion = 0;
+        while (opcion != 4) {
+            System.out.println("""
+                        OPCIONES DE CUENTA
+                        1 - Ingresar dinero
+                        2 - Retirar dinero
+                        3 - Ver datos de la cuenta
+                        4 - Salir
+                    """);
+            opcion = Integer.parseInt(teclado.nextLine());
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Introduce la cantidad a ingresar:");
+                    double cantidadIngreso = Double.parseDouble(teclado.nextLine());
+                    cuentaSeleccionada.ingresar(cantidadIngreso);
+                    System.out.println("Ingreso realizado con éxito.");
+                    break;
+                case 2:
+                    System.out.println("Introduce la cantidad a retirar:");
+                    double cantidadRetiro = Double.parseDouble(teclado.nextLine());
+                    cuentaSeleccionada.retirar(cantidadRetiro);
+                    System.out.println("Retiro realizado con éxito.");
+                    break;
+                case 3:
+                    cuentaSeleccionada.verDatos();
+                    break;
+                case 4:
+                    System.out.println("Saliendo de las opciones de la cuenta...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Inténtelo de nuevo.");
+                    break;
+            }
+        }
+    } 
 }
