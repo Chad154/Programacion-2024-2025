@@ -87,7 +87,8 @@ public class appBanco {
             nombre = teclado.nextLine();
             cliente = validarCliente(nombre);
         } while (cliente == null);
-
+        // Incrementar el contador
+        contador++;
         // crear la cuenta
 
         cuentas.add(new Cuenta(contador, contador, cliente));
