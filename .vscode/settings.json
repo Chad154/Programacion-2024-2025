@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "Tema8_BaseDatos"
+    ],
+    "java.project.referencedLibraries": [
+        "Tema8_BaseDatos\\Conector_BaseDatos\\mysql-connector-j-9.3.0.jar"
+    ]
+}
