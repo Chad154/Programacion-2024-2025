@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ejemploMySQL {
 
@@ -12,6 +13,10 @@ public class ejemploMySQL {
         try {
             Connection conex = DriverManager.getConnection(URL, User, PWD);
             System.out.println("Se ha conectado correctamente");
+            String query = "INSERT INTO contacto VALUES ('maria','maria@gmail.com')";
+            Statement instruccion = (Statement) conex.createStatement();
+            instruccion.executeUpdate(query);
+            System.out.println("Fila insertada");
             conex.close();
         } catch (SQLException e) {
             System.out.println(e);
