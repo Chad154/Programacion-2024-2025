@@ -1,0 +1,6 @@
+Esto es un texto sin salto de lineaNUEVA PALABTA
+Esto es un texto con salto de linea
+4.5455
+6
+8
+20
