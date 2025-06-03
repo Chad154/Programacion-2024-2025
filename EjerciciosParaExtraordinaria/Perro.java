@@ -3,7 +3,7 @@ package EjerciciosParaExtraordinaria;
 public class Perro extends Animal implements Mascota {
     private String raza;
 
-    public Perro(String nombre, String tipo, Color colorAnimal, String raza) throws NombreInvalidoException {
+    public Perro(String nombre, Color colorAnimal, String raza) throws NombreInvalidoException {
         super(nombre, "Mamifero - Perro", colorAnimal);
         this.raza = raza;
     }
@@ -16,4 +16,9 @@ public class Perro extends Animal implements Mascota {
         System.out.println(nombre + " esta jugando");
     }
 
+    @Override
+
+    public String toString() {
+        return super.toString() + ", raza: " + raza;
+    }
 }
