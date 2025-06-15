@@ -1,3 +1,5 @@
+package EjerciciosChatGPTRepaso.RefugioAnimales;
+
 public abstract class Animal {
 
     protected int id;

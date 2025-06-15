@@ -1,4 +1,4 @@
-package EjerciciosParaExtraordinaria;
+package EjerciciosParaExtraordinaria.Examen_Ordinaria;
 
 public class Perro extends Animal implements Mascota {
     private String raza;

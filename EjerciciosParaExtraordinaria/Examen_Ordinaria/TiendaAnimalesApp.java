@@ -1,4 +1,4 @@
-package EjerciciosParaExtraordinaria;
+package EjerciciosParaExtraordinaria.Examen_Ordinaria;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

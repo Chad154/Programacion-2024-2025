@@ -1,3 +1,5 @@
+package EjerciciosChatGPTRepaso.RefugioAnimales;
+
 public class Perro extends Animal {
 
     protected String raza;

@@ -1,4 +1,4 @@
-package EjerciciosParaExtraordinaria;
+package EjerciciosParaExtraordinaria.Examen_Ordinaria;
 
 public class Gato extends Animal implements Mascota {
     private String pelaje;
